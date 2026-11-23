@@ -1,0 +1,37 @@
+*** SPICE deck for cell 8T_cell_sim{sch} from library EMD_project_phase_1
+*** Created on Fri Mar 15, 2024 11:49:01
+*** Last revised on Wed Mar 27, 2024 17:43:47
+*** Written on Wed Mar 27, 2024 17:43:48 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 0.01, MIN_CAPAC 0.01FF
+
+*** TOP LEVEL CELL: 8T_cell_sim{sch}
+Mnmos@0 VR VL2 gnd gnd nmos L=0.022U W=0.022U
+Mnmos@2 BL WWL VR gnd nmos L=0.022U W=0.022U
+Mnmos@3 VL1 VR gnd gnd nmos L=0.022U W=0.022U
+Mnmos@4 BL_bar WWL VL1 gnd nmos L=0.022U W=0.022U
+Mnmos@5 RBL RWL net@51 gnd nmos L=0.022U W=0.022U
+Mnmos@6 net@51 VR gnd gnd nmos L=0.022U W=0.044U
+Mnmos@7 VR_1 VL3 gnd gnd nmos L=0.022U W=0.022U
+Mnmos@8 BL_1 WWL_1 VR_1 gnd nmos L=0.022U W=0.022U
+Mnmos@9 VL3 net@173 gnd gnd nmos L=0.022U W=0.022U
+Mnmos@10 BL_bar_1 WWL_1 VL3 gnd nmos L=0.022U W=0.022U
+Mnmos@11 RBL_1 RWL_1 net@106 gnd nmos L=0.022U W=0.022U
+Mnmos@12 net@106 VR_1 gnd gnd nmos L=0.022U W=0.044U
+Mpmos@0 vdd VL2 VR vdd pmos L=0.022U W=0.022U
+Mpmos@1 vdd VR VL1 vdd pmos L=0.022U W=0.022U
+Mpmos@2 vdd VL3 VR_1 vdd pmos L=0.022U W=0.022U
+Mpmos@3 vdd net@173 VL3 vdd pmos L=0.022U W=0.022U
+
+* Spice Code nodes in cell cell '8T_cell_sim{sch}'
+.include "E:\DIC\22nm_HP.pm"
+v1 vdd gnd dc 0.95
+v2 WWL gnd dc 0
+v3 WWL_1 gnd dc 0
+v4 BL gnd dc 0.95
+v5 BL2 gnd dc 0.95
+v6 BL_bar gnd dc 0.95
+v7 BL_bar2 gnd dc 0.95
+v8 VR gnd dc 0
+.dc v8 0 0.95 0.01
+.END
